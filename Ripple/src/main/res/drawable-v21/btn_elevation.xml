@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:state_enabled="true" android:state_pressed="true">
+        <set>
+            <objectAnimator
+
+                android:duration="1000" android:propertyName="translationZ" android:valueFrom="2dp" android:valueTo="4dp" android:valueType="floatType" />
+        </set>
+    </item>
+    <item>
+        <!--@android:integer/config_shorAnimTime-->
+        <set>
+            <objectAnimator android:duration="1000" android:propertyName="translationZ" android:valueFrom="4dp" android:valueTo="2dp" android:valueType="floatType" />
+        </set>
+    </item>
+</selector>

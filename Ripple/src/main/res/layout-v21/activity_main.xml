@@ -2,9 +2,27 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools" android:id="@+id/activity_main"
     android:layout_width="match_parent" android:layout_height="match_parent"
-
     android:orientation="vertical"
+    android:clickable="true"
+
     tools:context="com.imooc.skybatua.ripple.MainActivity">
+    <!--<FrameLayout-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="match_parent">-->
+        <!--<ImageView-->
+            <!--android:id="@+id/iv"-->
+            <!--android:layout_width="wrap_content"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:layout_gravity="center"-->
+            <!--android:translationZ="10dp"-->
+            <!--android:background="@drawable/bg_vector"/>-->
+        <!--<ImageView-->
+            <!--android:layout_width="100dp"-->
+            <!--android:layout_height="100dp"-->
+            <!--android:layout_gravity="center"-->
+            <!--android:elevation="50dp"-->
+            <!--android:background="@drawable/bg_shape_green"/>-->
+    <!--</FrameLayout>-->
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -12,7 +30,7 @@
         <Button
             android:layout_width="100dp"
             android:layout_height="100dp"
-            android:background="@drawable/btn_selector"
+            android:background="@drawable/ripple"
             android:layout_marginRight="25dp"
             android:text="按钮1"
         />
@@ -20,7 +38,7 @@
             android:layout_width="100dp"
             android:layout_height="100dp"
             android:text="按钮2"
-            android:background="@drawable/btn_selector"
+            android:background="@drawable/btn_ripple_selector"
             />
     </LinearLayout>
     <LinearLayout
@@ -33,16 +51,18 @@
             android:layout_height="100dp"
             android:background="@drawable/btn_selector"
             android:layout_marginRight="25dp"
-
+            android:clickable="true"
             android:gravity="center"
+
             android:text="按钮3"
-        />
-        <TextView
+            />
+        <Button
             android:layout_width="100dp"
             android:layout_height="100dp"
             android:text="按钮4"
             android:gravity="center"
-            android:background="@drawable/btn_selector"
+
+            android:background="@drawable/btn_ripple_selector"
             />
     </LinearLayout>
 </LinearLayout>
