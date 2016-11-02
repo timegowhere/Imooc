@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="200dp"
+    android:height="200dp"
+    android:viewportHeight="100"
+    android:viewportWidth="100">
+    <!--绘制秒针-->
+    <group
+        android:name="seconds"
+        android:pivotX="50"
+        android:pivotY="50"
+        android:rotation="0">
+        <path
+            android:pathData="M 50,50,L 50,5"
+            android:strokeColor="@android:color/holo_green_dark"
+            android:strokeLineCap="round"
+            android:strokeWidth="1" />
+    </group>
+    <!--绘制分针-->
+    <group
+        android:name="minites"
+        android:pivotX="50"
+        android:pivotY="50"
+        android:rotation="0">
+        <path
+            android:pathData="M 50,50,L 50,10"
+            android:strokeColor="@color/colorAccent"
+            android:strokeLineCap="round"
+            android:strokeWidth="1" />
+    </group>
+    <!--绘制时针-->
+    <group
+        android:name="hours"
+        android:pivotX="50"
+        android:pivotY="50"
+        android:rotation="0">
+        <path
+            android:pathData="M 50,50,L 50,18"
+            android:strokeColor="@color/colorPrimaryDark"
+            android:strokeLineCap="round"
+            android:strokeWidth="1" />
+    </group>
+    <!--绘制表盘-->
+    <path
+        android:pathData="
+         M 50,50
+         m -48,0
+         a 48,48 0 1,0 96,0
+         a 48,48 0 1,0 -96,0"
+        android:strokeColor="@color/colorPrimary"
+        android:strokeLineCap="round"
+        android:strokeWidth="1" />
+
+
+</vector>

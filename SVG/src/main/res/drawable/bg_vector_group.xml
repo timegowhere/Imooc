@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="500dp"
+    android:height="500dp"
+    android:viewportWidth="600"
+    android:viewportHeight="600">
+    <group
+        android:name="rotationGrop"
+        android:pivotX="300.0"
+        android:pivotY="300.0"
+        android:rotation="45.0"
+        >
+        <path android:name="v1"
+            android:fillColor="@color/colorAccent"
+            android:pathData="M 100 100 L 300 100 L 200 300 z"/>
+        <path android:name="v2"
+            android:fillColor="@color/colorPrimaryDark"
+            android:pathData="M 500 400 L 300 100 L 200 300 z"/>
+    </group>
+
+</vector>

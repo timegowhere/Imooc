@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">SVG</string>
+    <string name="path_face_mouth_happy"> M 35,70 C50,78 50,78 65,70</string>
+    <string name="path_face_mouth_sad">M 35,70 C50,62 50,62 65,70</string>
+</resources>
