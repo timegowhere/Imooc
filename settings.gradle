@@ -1,1 +1,1 @@
-include ':app', ':Ripple', ':SVG'
+include ':app', ':Ripple', ':SVG', ':NavigationDrawer'
