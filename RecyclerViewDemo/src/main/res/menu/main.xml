@@ -25,7 +25,11 @@
         <item
             android:id="@+id/menu_staggered"
             android:orderInCategory="100"
-            android:title="瀑布流"
+            android:title="瀑布流" />
+        <item
+            android:id="@+id/menu_mult_type"
+            android:orderInCategory="100"
+            android:title="mult_type"
             app:showAsAction="never" />
 
     </group>

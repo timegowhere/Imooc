@@ -110,6 +110,9 @@ public class MainActivity extends AppCompatActivity {
                 startActivity(new Intent(this,StaggerGridLayoutActivity.class));
 
                 break;
+            case R.id.menu_mult_type:
+                startActivity(new Intent(this,RecyclerViewMultTypeActivity.class));
+                break;
 
         }
         return super.onOptionsItemSelected(item);
