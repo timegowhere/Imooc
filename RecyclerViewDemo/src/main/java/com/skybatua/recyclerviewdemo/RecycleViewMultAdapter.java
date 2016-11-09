@@ -17,11 +17,15 @@ public class RecycleViewMultAdapter extends RecyclerView.Adapter<AbstractViewHol
     private Context mContext;
     private List<DemoModel> mDemoModels = new ArrayList<>();
     private LayoutInflater mLayoutInflater;
-    public RecycleViewMultAdapter(Context context,List<DemoModel> demoModels){
+    public RecycleViewMultAdapter(Context context){
         mContext =context;
-        mDemoModels = demoModels;
+
        mLayoutInflater = LayoutInflater.from(mContext);
 
+    }
+    public void addDatas(List<DemoModel> demoModels){
+        mDemoModels = demoModels;
+        notifyDataSetChanged();
     }
     @Override
     public AbstractViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {

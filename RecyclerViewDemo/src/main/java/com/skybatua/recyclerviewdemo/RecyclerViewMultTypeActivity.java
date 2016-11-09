@@ -2,7 +2,7 @@ package com.skybatua.recyclerviewdemo;
 
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
-import android.support.v7.widget.LinearLayoutManager;
+import android.support.v7.widget.GridLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.util.Log;
 
@@ -26,8 +26,11 @@ public class RecyclerViewMultTypeActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_recycler_view_mult_type);
         mRecyclerView = (RecyclerView) findViewById(R.id.recyclerView);
-        mRecyclerView.setLayoutManager(new LinearLayoutManager(this, LinearLayoutManager.VERTICAL, false));
-        mRecycleViewMultAdapter = new RecycleViewMultAdapter(this, mDemoModels);
+        GridLayoutManager gridLayoutManager = new GridLayoutManager(this,2);
+
+//        mRecyclerView.setLayoutManager(new LinearLayoutManager(this, LinearLayoutManager.VERTICAL, false));
+        mRecyclerView.setLayoutManager(gridLayoutManager);
+        mRecycleViewMultAdapter = new RecycleViewMultAdapter(this);
         mRecyclerView.setAdapter(mRecycleViewMultAdapter);
         initData();
 
@@ -49,6 +52,7 @@ public class RecyclerViewMultTypeActivity extends AppCompatActivity {
             mDemoModels.add(demoModel);
 
         }
+        mRecycleViewMultAdapter.addDatas(mDemoModels);
         Log.i(TAG, "initData: demoModel.toString()="+mDemoModels.toString());
     }
 }
