@@ -1,4 +1,4 @@
-package com.skybatua.recyclerviewdemo;
+package com.skybatua.recyclerviewdemo.model;
 
 /**
  * Created by q6593 on 2016/11/8.

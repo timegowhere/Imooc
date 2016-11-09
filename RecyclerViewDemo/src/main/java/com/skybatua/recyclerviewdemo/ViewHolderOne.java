@@ -4,11 +4,13 @@ import android.view.View;
 import android.widget.ImageView;
 import android.widget.TextView;
 
+import com.skybatua.recyclerviewdemo.model.DemoModelOne;
+
 /**
  * Created by q6593 on 2016/11/8.
  */
 
-public class ViewHolderOne extends AbstractViewHolder{
+public class ViewHolderOne extends AbstractViewHolder<DemoModelOne>{
     private ImageView iv_avatar;
     private TextView tv_name;
 
@@ -19,7 +21,7 @@ public class ViewHolderOne extends AbstractViewHolder{
     }
 
     @Override
-    public void setViewData(DemoModel demoModel) {
+    public void setViewData(DemoModelOne demoModel) {
         super.setViewData(demoModel);
         iv_avatar.setImageResource(demoModel.avatarColor);
         tv_name.setText(demoModel.name);

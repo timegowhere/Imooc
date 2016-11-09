@@ -8,6 +8,11 @@ import android.support.v7.widget.RecyclerView;
 import android.util.Log;
 import android.view.View;
 
+import com.skybatua.recyclerviewdemo.model.DemoModel;
+import com.skybatua.recyclerviewdemo.model.DemoModelOne;
+import com.skybatua.recyclerviewdemo.model.DemoModelThree;
+import com.skybatua.recyclerviewdemo.model.DemoModelTwo;
+
 import java.util.ArrayList;
 import java.util.List;
 
@@ -67,29 +72,58 @@ public class RecyclerViewMultTypeActivity extends AppCompatActivity {
     }
 
     private void initData() {
-        for (int i = 0; i < 15; i++) {
-            DemoModel demoModel = new DemoModel();
-            demoModel.type = (int) (Math.random() * 3 + 1);
-            if (i<5){
-                demoModel.type = 1;
-            }else if (i<10){
-                demoModel.type = 2;
-            }else if (i<15){
-                demoModel.type = 3;
-            }
+//        for (int i = 0; i < 15; i++) {
+//            DemoModel demoModel = new DemoModel();
+//            demoModel.type = (int) (Math.random() * 3 + 1);
+//            if (i<5){
+//                demoModel.type = 1;
+//            }else if (i<10){
+//                demoModel.type = 2;
+//            }else if (i<15){
+//                demoModel.type = 3;
+//            }
+//            demoModel.avatarColor = mColors[i % 4];
+//            demoModel.name = "name " + i;
+//            demoModel.content = "content " + i;
+//            demoModel.contentColor = mColors[(int) (Math.random() * 4)];
+//
+//            mDemoModels.add(demoModel);
+//
+//        }
+        List<DemoModelOne> oneList = new ArrayList<>();
+
+
+        for (int i = 0; i < 10; i++) {
+            DemoModelOne demoModel = new DemoModelOne();
+
             demoModel.avatarColor = mColors[i % 4];
             demoModel.name = "name " + i;
-            demoModel.content = "content " + i;
-            demoModel.contentColor = mColors[(int) (Math.random() * 4)];
-//            demoModel.setType ((int) (Math.random()*3+1));
-//            demoModel.setAvatarColor(mColors[20%3]);
-//            demoModel.setName("name "+i);
-//            demoModel.setContent("content "+i);
-//            demoModel.setContentColor(mColors[(int) (Math.random()*3)]);
-            mDemoModels.add(demoModel);
+            oneList.add(demoModel);
 
         }
-        mRecycleViewMultAdapter.addDatas(mDemoModels);
+        List<DemoModelTwo> twoList = new ArrayList<>();
+        for (int i = 0; i < 10; i++) {
+            DemoModelTwo demoModel = new DemoModelTwo();
+
+            demoModel.avatarColor = mColors[i % 4];
+            demoModel.name = "name " + i;
+            demoModel.content = "content"+i;
+            twoList.add(demoModel);
+
+        }
+        List<DemoModelThree> threeList = new ArrayList<>();
+        for (int i = 0; i < 10; i++) {
+            DemoModelThree demoModel = new DemoModelThree();
+
+            demoModel.avatarColor = mColors[i % 4];
+            demoModel.name = "name " + i;
+            demoModel.content = "content"+i;
+            demoModel.contentColor = mColors[i%4];
+            threeList.add(demoModel);
+
+        }
+//        mRecycleViewMultAdapter.addDatas(mDemoModels);
+        mRecycleViewMultAdapter.addDatas(oneList,twoList,threeList);
         Log.i(TAG, "initData: demoModel.toString()=" + mDemoModels.toString());
     }
 }
