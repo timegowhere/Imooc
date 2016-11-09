@@ -66,7 +66,8 @@ public class RecycleViewMultAdapter extends RecyclerView.Adapter<AbstractViewHol
 
     @Override
     public int getItemViewType(int position) {
-        return (int) (Math.random()*3+1);
+//        return (int) (Math.random()*3+1);
+        return mDemoModels.get(position).type;
 //        if (position%2==0){
 //            return 0;
 //        }else {
